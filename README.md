@@ -117,6 +117,8 @@ If you have any issues, please refer to official documentation [here](https://mo
 
 ### Demo Video
 
+https://github.com/user-attachments/assets/c954a6e0-cded-4f95-b63d-a50ba930bada
+
 ## 🔍 Features
 
 - 📄 Document ingestion and chunking
