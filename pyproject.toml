@@ -1,0 +1,45 @@
+[project]
+name = "chromadb-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=0.6.3",
+    "langchain-google-genai>=2.1.1",
+    "mcp[cli]>=1.5.0",
+    "pydantic>=2.10.6",
+    "pylint>=3.3.6",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[project.scripts]
+chromadb-mcp = "src.server:main"
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "missing-class-docstring",
+    "too-few-public-methods",
+    "too-many-arguments",
+]
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pylint.design]
+max-args = 10
+
+[dependency-groups]
+dev = [
+    "docling>=2.28.2",
+    "langchain-chroma>=0.2.2",
+    "langchain-google-genai>=2.1.1",
+    "langchain-text-splitters>=0.3.7",
+    "python-dotenv>=1.0.0",
+    "rich>=13.9.4",
+]
